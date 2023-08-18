@@ -6,13 +6,13 @@ VKEW is a single-header Vulkan Extension Wrangler, generated from the [Vulkan re
 
 This automates the task of calling `vkGetInstanceProcAddr()` and `vkGetDeviceProcAddr()` for every non-core function you may need, this does not replace, but instead complement, the usual way you access Vulkan on your platform.
 
-Naming and general "way of working" is inspired by [GLEW](https://glew.sourceforge.net/). However, VKEW is a really small header only library and do not interfere with the linking process
+Naming and general "way of working" is inspired by [GLEW](https://glew.sourceforge.net/). However, VKEW is a really small header-only library and do not interfere with the linking process
 
 ## How to use VKEW
 
 ```cpp
 
-//Include Vulkan your usual way. Assuming from now all the neccesary VULKAN_USE_PLATFORM macros are also defined
+//Include Vulkan your usual way. Assuming from now all the necessary VULKAN_USE_PLATFORM macros are also defined
 #include "vkew.h"
 
 
@@ -23,13 +23,13 @@ vkewInitInstance(instance);
 vkewInitDevice(device);
 
 
-//Check for extension command to be loaded
+//Check for the extension command to be loaded
 if(vkSomeFunctionEXT != NULL)
 {
-    //the vkSomeFunctionEXT Vulkan command is not null anc callable
+    //the vkSomeFunctionEXT Vulkan command is not null and callable
 }
 
-//If you want to unlad all loaded pointers
+//If you want to unload all loaded pointers
 vkewQuit();
 ```
 
